@@ -7,11 +7,11 @@
 function tyrolienne_news_func($atts) {
   extract(shortcode_atts(array('count' => 5), $atts));
 
-  query_posts(array('post_type' => 'post', 'posts_per_page' => $count));
+  $news = new WP_Query(array('post_type' => 'post', 'posts_per_page' => $count));
 
   ob_start();
 
-  while (have_posts()) : the_post();
+  while ($news->have_posts()) : $news->the_post();
     get_template_part('templates/content', get_post_format());
   endwhile;
 
