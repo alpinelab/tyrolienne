@@ -3,7 +3,7 @@
  * Custom functions
  */
 
-//[foobar]
+// [tyrolienne_news count=5]
 function tyrolienne_news_func($atts) {
   extract(shortcode_atts(array('count' => 5), $atts));
 
@@ -11,11 +11,9 @@ function tyrolienne_news_func($atts) {
 
   ob_start();
 
-  ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <?php get_template_part('templates/content', get_post_format()); ?>
-    <?php endwhile; ?>
-  <?php
+  while (have_posts()) : the_post();
+    get_template_part('templates/content', get_post_format());
+  endwhile;
 
   return ob_get_clean();
 }
