@@ -24,6 +24,13 @@
 @brand-danger:          #d9534f;
 @brand-info:            #5bc0de;
 
+// Tyrolienne colors
+// -------------------------
+
+@tyro-red:              #c4241e;
+@tyro-orange:           #d77f15;
+@tyro-yellow:           #f7d800;
+
 // Scaffolding
 // -------------------------
 
@@ -39,7 +46,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  GeoSansLightRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -260,15 +267,15 @@
 // -------------------------
 
 // Basics of a navbar
-@navbar-height:                    50px;
+@navbar-height:                    400px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-bg:                black;
+@navbar-default-border:            @tyro-orange;
 
 // Navbar links
 @navbar-default-link-color:                #777;

@@ -1,21 +1,20 @@
 <header class="banner navbar navbar-default navbar-static-top navbar-arrow" role="banner">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
-    </div>
 
-    <nav class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
-        endif;
-      ?>
-    </nav>
+    <div class="navbar-header">
+      <div class="logo">
+        <img src="<?= get_stylesheet_directory_uri() ?>/assets/img/tyrolienne-logo-header-big.png">
+      </div>
+      <h1 class="primary-header-content">
+        <span class="orelle">Orelle</span>
+        <span class="gt yellow">&rang;</span>
+        <span class="valthorens">Val Thorens</span>
+        <span class="baseline yellow">À vol d'oiseau</span>
+      </h1>
+      <div class="secondary-header-content">
+        <span class="baseline-en yellow">As the eagle flies</span>
+        <span class="hashtag">#latyrolienne</span>
+      </div>
+    </div>
   </div>
 </header>
