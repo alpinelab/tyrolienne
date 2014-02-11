@@ -33,7 +33,13 @@ body {
          color: white;
          text-transform: uppercase;
 
-         .logo { margin-bottom: 1em }
+         .logo {
+            margin-bottom: 1em;
+            img {
+               border-bottom: solid 1px @tyro-yellow;
+               padding-bottom: 0.5em;
+            }
+         }
 
          .primary-header-content {
             .gt {
@@ -63,7 +69,7 @@ body {
             }
             .valthorens { right: 110%; }
             .orelle { left: 110%; }
-            .s3v { height: 12em; }
+            .s3v { padding: 4em 0 2em; }
          }
       }
    }

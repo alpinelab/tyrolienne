@@ -20,7 +20,9 @@
       <div class="resorts-content">
 
         <div class="resort valthorens">
-          <img class="logo" src="<?= image_asset('logo-valthorens-small.png') ?>"></img>
+          <a href="http://www.valthorens.com">
+            <img class="logo" src="<?= image_asset('logo-valthorens-small.png') ?>"></img>
+          </a>
           <div class="social-networks">
             <a href="https://twitter.com/Val_Tho">
               <img src="<?= image_asset('icon-twitter.png') ?>">
@@ -35,7 +37,9 @@
         </div>
 
         <div class="resort orelle">
-          <img class="logo" src="<?= image_asset('logo-orelle-small.png') ?>"></img>
+          <a href="http://www.orelle.net">
+            <img class="logo" src="<?= image_asset('logo-orelle-small.png') ?>"></img>
+          </a>
           <div class="social-networks">
             <a href="https://www.youtube.com/user/OTOrelle">
               <img src="<?= image_asset('icon-youtube.png') ?>">
@@ -49,7 +53,11 @@
           </div>
         </div>
 
-        <div class="s3v"></div>
+        <div class="s3v">
+          <a href="http://www.les3vallees.com">
+            <img src="<?= image_asset('3vallees.png') ?>">
+          </a>
+        </div>
 
       </div>
 
