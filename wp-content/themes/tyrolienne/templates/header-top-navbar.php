@@ -18,6 +18,7 @@
       </div>
 
       <div class="resorts-content">
+
         <div class="resort valthorens">
           <img class="logo" src="<?= image_asset('logo-valthorens-small.png') ?>"></img>
           <div class="social-networks">
@@ -32,6 +33,7 @@
             </a>
           </div>
         </div>
+
         <div class="resort orelle">
           <img class="logo" src="<?= image_asset('logo-orelle-small.png') ?>"></img>
           <div class="social-networks">
@@ -46,7 +48,9 @@
             </a>
           </div>
         </div>
+
         <div class="s3v"></div>
+
       </div>
 
     </div>
