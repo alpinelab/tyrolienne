@@ -4,7 +4,9 @@
     <div class="navbar-header">
 
       <div class="logo">
-        <img src="<?= image_asset('tyrolienne-logo-header-big.png') ?>">
+        <a href="<?= home_url() ?>">
+          <img src="<?= image_asset('tyrolienne-logo-header-big.png') ?>">
+        </a>
       </div>
 
       <h1 class="primary-header-content">
