@@ -18,3 +18,9 @@ function tyrolienne_news_func($atts) {
   return ob_get_clean();
 }
 add_shortcode('tyrolienne_news', 'tyrolienne_news_func' );
+
+
+// URL helper
+function image_asset($filename) {
+  return get_stylesheet_directory_uri() . '/assets/img/' . $filename;
+}

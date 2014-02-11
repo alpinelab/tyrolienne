@@ -38,11 +38,28 @@ body { }
             }
             .gt, .baseline { color: @tyro-yellow; }
          }
+
          .secondary-header-content {
             text-align: left;
             font-size: @font-size-h3;
             .baseline-en { color: @tyro-yellow; }
             .hashtag { float: right; }
+         }
+
+         .resorts-content {
+            position: relative;
+            .resort {
+               position: absolute;
+               top: -3em;
+               .logo { margin-bottom: 1em; }
+               .social-networks {
+                  white-space: nowrap;
+                  a { text-decoration: none; }
+               }
+            }
+            .valthorens { right: 110%; }
+            .orelle { left: 110%; }
+            .s3v { height: 12em; }
          }
       }
    }
