@@ -9,11 +9,7 @@
    Base
    ========================================================================== */
 
-body {
-   .red     { color: @tyro-red;     }
-   .orange  { color: @tyro-orange;  }
-   .yellow  { color: @tyro-yellow;  }
-}
+body { }
 
 
 
@@ -33,22 +29,20 @@ body {
          color: white;
          text-transform: uppercase;
 
-         .logo {
-            margin-bottom: 1em
-         }
+         .logo { margin-bottom: 1em }
 
          .primary-header-content {
             .gt {
                font-size: 0.9em;
                vertical-align: top;
             }
+            .gt, .baseline { color: @tyro-yellow; }
          }
          .secondary-header-content {
             text-align: left;
             font-size: @font-size-h3;
-            .hashtag {
-               float: right;
-            }
+            .baseline-en { color: @tyro-yellow; }
+            .hashtag { float: right; }
          }
       }
    }
