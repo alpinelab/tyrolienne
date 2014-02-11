@@ -3,16 +3,16 @@
 
     <div class="navbar-header">
 
-      <div class="logo">
+      <h1 class="logo">
         <a href="<?= home_url() ?>">
-          <img src="<?= image_asset('tyrolienne-logo-header-big.png') ?>">
+          <img src="<?= image_asset('tyrolienne-logo-header-big.png') ?>" alt="La Tyrolienne">
         </a>
-      </div>
+      </h1>
 
-      <h1 class="primary-header-content">
+      <h2 class="primary-header-content">
         Orelle <span class="gt">&rang;</span> Val Thorens
         <span class="baseline">À vol d'oiseau</span>
-      </h1>
+      </h2>
 
       <div class="secondary-header-content">
         <span class="baseline-en yellow">As the eagle flies</span>
