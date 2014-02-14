@@ -23,7 +23,8 @@ body {
    ========================================================================== */
 
 .banner {
-   border-bottom: 1px solid @navbar-default-border;
+   border-bottom: none;
+   .box-shadow(0 1px 30px rgba(255,255,255,0.4));
    .container {
       text-align: center;
       .navbar-header {
@@ -58,6 +59,7 @@ body {
 
          .resorts-content {
             position: relative;
+            height: 10em;
             .resort {
                position: absolute;
                top: -3em;
@@ -69,7 +71,6 @@ body {
             }
             .valthorens { right: 110%; }
             .orelle { left: 110%; }
-            .s3v { padding: 4em 0 2em; }
          }
       }
    }
@@ -107,15 +108,29 @@ body {
    ========================================================================== */
 
 .hentry {
+   clear: both;
    header { }
    time { }
-   .post-thumbnail {
-      height: 25em;
-      background-size: cover;
-   }
+   .post-thumbnail { .box-shadow(2px 2px 2px 0.5px #cfcfcf); }
    .entry-title a { color: white; }
-   .entry-content { }
+   .entry-content { font-size: @font-size-large; text-align: justify; }
    footer { }
+   #comments { display: none; }
+
+   &.format-standard {
+      .wp-post-image { width: 100%; }
+      .entry-content { .content-columns(3); }
+   }
+   &.format-aside {
+      .wp-post-image {
+         width: 50%;
+         float: left;
+         margin-right: @grid-gutter-width;
+      }
+      .entry-content {
+         .content-columns(2);
+      }
+   }
 }
 
 

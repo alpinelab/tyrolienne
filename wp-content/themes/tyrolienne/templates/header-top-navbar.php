@@ -55,12 +55,6 @@
           </div>
         </div>
 
-        <div class="s3v">
-          <a href="http://www.les3vallees.com" target="_blank">
-            <img src="<?= image_asset('3vallees.png') ?>">
-          </a>
-        </div>
-
       </div>
 
     </div>

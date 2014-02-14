@@ -3,7 +3,7 @@
  * Custom functions
  */
 
-// [tyrolienne_news count=5]
+// Shortcode: [tyrolienne_news count=5]
 function tyrolienne_news_func($atts) {
   extract(shortcode_atts(array('count' => 5), $atts));
 
@@ -24,3 +24,6 @@ add_shortcode('tyrolienne_news', 'tyrolienne_news_func' );
 function image_asset($filename) {
   return get_stylesheet_directory_uri() . '/assets/img/' . $filename;
 }
+
+// Post formats
+add_theme_support('post-formats', array('aside'));
