@@ -37,7 +37,7 @@ body {
          .logo {
             margin-bottom: 1em;
             img {
-               border-bottom: solid 1px @tyro-yellow;
+               border-bottom: solid 1px white;
                padding-bottom: 0.5em;
             }
          }
@@ -53,8 +53,10 @@ body {
          .secondary-header-content {
             text-align: left;
             font-size: @font-size-h4;
-            .baseline-en { color: @tyro-yellow; }
-            .hashtag { float: right; }
+            .baseline-en {
+               color: @tyro-yellow;
+               float: right;
+            }
          }
 
          .resorts-content {
@@ -88,7 +90,40 @@ body {
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+   font-size: @font-size-large;
+   text-align: justify;
+   h2 {
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: @font-size-huge;
+      margin: 70px 0 40px;
+      &::before {
+         content: '⟩';
+         color: @tyro-red;
+         padding-right: 0.25em;
+      }
+      &::after {
+         content: '';
+         width: 100%;
+         display: inline-block;
+         border-bottom: solid 2px;
+         margin-left: 0.25em;
+      }
+      &:nth-of-type(3n+1) {
+         &::before { color: @tyro-red; }
+         &::after { border-color: @tyro-red; }
+      }
+      &:nth-of-type(3n+2) {
+         &::before { color: @tyro-orange; }
+         &::after { border-color: @tyro-orange; }
+      }
+      &:nth-of-type(3n+3) {
+         &::before { color: @tyro-yellow; }
+         &::after { border-color: @tyro-yellow; }
+      }
+   }
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -109,11 +144,22 @@ body {
 
 .hentry {
    clear: both;
-   header { }
+   header { margin: 20px 0 30px; }
    time { }
-   .post-thumbnail { .box-shadow(2px 2px 2px 0.5px #cfcfcf); }
-   .entry-title a { color: white; }
-   .entry-content { font-size: @font-size-large; text-align: justify; }
+   .wp-post-image,
+   .carousel,
+   .featured_video_plus {
+      margin-bottom: 20px;
+   }
+   .entry-title {
+      display: inline;
+      a { color: white; }
+   }
+   .carousel .item img,
+   .carousel .item a img {
+      width: 100%;
+   }
+   .entry-content { }
    footer { }
    #comments { display: none; }
 
@@ -134,12 +180,47 @@ body {
 }
 
 
+.wall-outer {
+   .dcsns-toolbar .filter {
+      li a {
+         height: 48px;
+         width: 48px;
+         text-align: center;
+         padding-top: 12px;
+      }
+      .link-all {
+         height: 48px;
+         padding-top:16px;
+      }
+   }
+   .dcwss.dc-wall .stream.isotope .isotope-item .inner {
+      font-family: @font-family-sans-serif;
+      color: black;
+   }
+}
+
+
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+   padding: 150px 1em 1em;
+   .menu {
+      font-size: @font-size-large;
+      list-style: none;
+      a, a:hover { color: white; }
+   }
+   .logos {
+      float: right;
+      margin-top: -1em;
+      a {
+         text-decoration: none;
+         margin-left: 100px;
+      }
+   }
+}
 
 
 
