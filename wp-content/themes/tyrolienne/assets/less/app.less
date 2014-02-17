@@ -41,6 +41,7 @@ body {
                padding-bottom: 0.5em;
             }
          }
+         .mini-logo { display: none; }
 
          .primary-header-content {
             .gt {
@@ -77,6 +78,24 @@ body {
       }
    }
 }
+
+.banner.affix {
+   width: 100%;
+   height: @navbar-minified-height;
+   min-height: inherit;
+   .container .navbar-header {
+      padding: 0;
+      .mini-logo { display: block; margin: 0 auto; }
+      .logo,
+      .primary-header-content,
+      .secondary-header-content,
+      .resorts-content {
+         display: none;
+      }
+   }
+   & + .wrap { padding-top: @navbar-height + @navbar-minified-height; }
+}
+
 
 /* ==========================================================================
    Content

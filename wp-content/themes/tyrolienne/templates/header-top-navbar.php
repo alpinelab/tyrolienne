@@ -1,4 +1,4 @@
-<header class="banner navbar navbar-default navbar-static-top navbar-arrow" role="banner">
+<header class="banner navbar navbar-default navbar-static-top" data-spy="affix" data-offset-top="400" role="banner">
   <div class="container">
 
     <div class="navbar-header">
@@ -8,6 +8,12 @@
           <img src="<?= image_asset('tyrolienne-logo-header-big.png') ?>" alt="La Tyrolienne">
         </a>
       </h1>
+
+      <div class="mini-logo">
+        <a href="<?= home_url() ?>">
+          <img src="<?= image_asset('tyrolienne-logo-header-small.png') ?>">
+        </a>
+      </div>
 
       <h2 class="primary-header-content">
         Orelle <span class="gt">&rang;</span> Val Thorens
