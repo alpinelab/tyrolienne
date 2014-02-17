@@ -275,8 +275,8 @@ function dc_social_wall_shortcode( $atts, $content = null ){
 	'rotate_delay' => 8,
 	'rotate_direction' => 'up',
 	'cache' => 'true',
-	'iconPath' => '/images/dcwss-dark/',
-	'imagePath' => '/images/dcwss-dark/',
+	'icon_path' => '/images/dcwss-dark/',
+	'image_path' => '/images/dcwss-dark/',
 	'debug' => 'false'
 	), $atts ));
 	
@@ -479,8 +479,8 @@ function dc_social_wall_shortcode( $atts, $content = null ){
 	
 	$config = '{'.$feeds.$opt;
 	$config .= ',wall: true,container: "dcwss",cstream: "stream",content: "dcwss-content"';
-	$config .= ',imagePath: "'.dc_jqsocialstream::get_plugin_directory().$imagePath.'"';
-	$config .= ',iconPath: "'.dc_jqsocialstream::get_plugin_directory().$iconPath.'"}';
+	$config .= ',imagePath: "'.dc_jqsocialstream::get_plugin_directory().$image_path.'"';
+	$config .= ',iconPath: "'.dc_jqsocialstream::get_plugin_directory().$icon_path.'"}';
 
 	$out .='<script type="text/javascript">jQuery(document).ready(function($){';
 	$out .= 'var config = '.$config.';';

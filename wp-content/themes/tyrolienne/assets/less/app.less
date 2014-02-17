@@ -9,13 +9,8 @@
    Base
    ========================================================================== */
 
-body {
-   background-image: url('../img/background-eagle.jpg');
-   background-size: contain;
-   background-position: 0 @navbar-height;
-   background-repeat: no-repeat;
-}
-
+body { }
+.clear { clear: both; }
 
 
 /* ==========================================================================
@@ -23,6 +18,11 @@ body {
    ========================================================================== */
 
 .banner {
+   background-image: url('../img/background-eagle.jpg');
+   background-size: cover;
+   background-position: 0 0;
+   background-repeat: no-repeat;
+   background-color: black;
    border-bottom: none;
    .box-shadow(0 1px 30px rgba(255,255,255,0.4));
    .container {
@@ -83,6 +83,7 @@ body {
    width: 100%;
    height: @navbar-minified-height;
    min-height: inherit;
+   background-image: none;
    .container .navbar-header {
       padding: 0;
       .mini-logo { display: block; margin: 0 auto; }
@@ -163,6 +164,7 @@ body {
 
 .hentry {
    clear: both;
+   margin-bottom: 50px;
    header { margin: 20px 0 30px; }
    time { }
    .wp-post-image,
@@ -172,6 +174,7 @@ body {
    }
    .entry-title {
       display: inline;
+      font-size: @font-size-h1;
       a { color: white; }
    }
    .carousel .item img,
@@ -212,9 +215,15 @@ body {
          padding-top:16px;
       }
    }
-   .dcwss.dc-wall .stream.isotope .isotope-item .inner {
-      font-family: @font-family-sans-serif;
-      color: black;
+   .dcwss.dc-wall .stream.isotope .isotope-item {
+      .inner {
+         font-family: @font-family-sans-serif;
+         color: black;
+      }
+      .section-intro {
+         background-color: white !important;
+         &, & a { color: black; }
+      }
    }
 }
 
