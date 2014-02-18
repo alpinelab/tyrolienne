@@ -41,11 +41,13 @@ body { }
          .mini-logo { display: none; }
 
          .primary-header-content {
-            .gt {
-               font-size: 0.9em;
-               vertical-align: top;
+            .glyphicon-chevron-right {
+               color: black;
+               font-size: 0.85em;
+               text-shadow: 4px 0px 0px @tyro-yellow;
+               margin-left: -0.5em;
             }
-            .gt, .baseline { color: @tyro-yellow; }
+            .baseline { color: @tyro-yellow; }
          }
 
          .secondary-header-content {
@@ -116,10 +118,11 @@ body { }
       overflow: hidden;
       font-size: @font-size-huge;
       margin: 70px 0 40px;
-      &::before {
-         content: '⟩';
-         color: @tyro-red;
-         padding-right: 0.25em;
+      .glyphicon {
+         color: black;
+         font-size: 0.85em;
+         margin-left: -0.5em;
+         margin-right: 0.5em;
       }
       &::after {
          content: '';
@@ -130,16 +133,16 @@ body { }
       }
    }
    section#news {
-      h2::before { color: @tyro-red; }
+      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-red; }
       h2::after { border-color: @tyro-red; }
       h3 a:hover { color: @tyro-red; text-decoration: none; }
    }
    section#community {
-      h2::before { color: @tyro-orange; }
+      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-orange; }
       h2::after { border-color: @tyro-orange; }
    }
    section#infos {
-      h2::before { color: @tyro-yellow; }
+      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-yellow; }
       h2::after { border-color: @tyro-yellow; }
    }
 }
@@ -162,13 +165,19 @@ body { }
       padding: 0;
       li {
          a { color: white; }
-         &:hover, &:hover a {
+         &:hover a {
             color: @tyro-red;
             text-decoration: none;
+            &::before { text-shadow: 3px 0 0 @tyro-red; }
          }
-         &::before {
-            content: '⟩';
-            padding-right: 0.5em;
+         a::before {
+            font-family: 'Glyphicons Halflings';
+            content: "\e080";
+            color: black;
+            text-shadow: 2px 0 0 white;
+            font-size: 0.75em;
+            margin-left: -0.5em;
+            margin-right: 0.5em;
          }
       }
    }
@@ -222,6 +231,7 @@ body { }
 // when a sidebar is present (on single post page)
 .single .hentry.format-aside .entry-content { .content-columns(1); }
 
+// This is for the WordPress Social Stream wall
 .wall-outer {
    .dcsns-toolbar .filter {
       li a {
@@ -294,7 +304,40 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+@media (max-width: @screen-sm-max) {
+   .banner .container .navbar-header {
+      .logo img { max-width: 80%; }
+      .primary-header-content .baseline { display: block; }
+      .secondary-header-content {
+         text-align: center;
+         .baseline-en, .hashtag { float: none; display: block; }
+      }
+      .resorts-content { display: none; }
+   }
+   .hentry {
+      time { display:block; }
+      &.format-standard, &.format-aside {
+         .wp-post-image {
+            width: 100%;
+            float: none;
+            margin-right: 0;
+         }
+         .entry-content { .content-columns(1); }
+      }
+   }
+   .content-info {
+      text-align: center;
+      .container {
+         padding-top: 1em;
+         .logos {
+            float: none;
+            margin: 0 0 1em;
+            a { margin-left: 0; }
+         }
+      }
+   }
+   .sidebar { padding-left: 1em; }
+}
 
 @media (min-width: @screen-md-min) { }
 

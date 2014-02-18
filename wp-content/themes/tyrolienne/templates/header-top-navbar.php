@@ -16,7 +16,7 @@
       </div>
 
       <h2 class="primary-header-content">
-        Orelle <span class="gt">&rang;</span> Val Thorens
+        Orelle <i class="glyphicon glyphicon-chevron-right"></i> Val Thorens
         <span class="baseline">À vol d'oiseau</span>
       </h2>
 
