@@ -29,7 +29,7 @@
 
 @tyro-red:              #c4241e;
 @tyro-orange:           #d77f15;
-@tyro-yellow:           #f7d800;
+@tyro-yellow:           #ffea5d;
 
 // Scaffolding
 // -------------------------
@@ -242,10 +242,16 @@
 @screen-lg-min:              @screen-lg;
 @screen-lg-desktop:          @screen-lg-min;
 
+// Extra large screen / bastard screens
+@screen-xl:                  2000px;
+@screen-xl-min:              @screen-xl;
+
+
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
 
 
 // Grid system

@@ -9,7 +9,11 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+   a { color: white; }
+   a:hover { color: @tyro-yellow; }
+   a, a:hover { text-decoration: none; }
+}
 .clear { clear: both; }
 
 
@@ -69,7 +73,6 @@ body { }
                .logo { margin-bottom: 1em; }
                .social-networks {
                   white-space: nowrap;
-                  a { text-decoration: none; }
                }
             }
             .valthorens { right: 110%; }
@@ -132,18 +135,18 @@ body { }
          margin-left: 0.25em;
       }
    }
+   h3 a:hover { color: @tyro-yellow; }
    section#news {
-      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-red; }
-      h2::after { border-color: @tyro-red; }
-      h3 a:hover { color: @tyro-red; text-decoration: none; }
+      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-yellow; }
+      h2::after { border-color: @tyro-yellow; }
    }
    section#community {
       h2 .glyphicon { text-shadow: 5px 0 0 @tyro-orange; }
       h2::after { border-color: @tyro-orange; }
    }
    section#infos {
-      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-yellow; }
-      h2::after { border-color: @tyro-yellow; }
+      h2 .glyphicon { text-shadow: 5px 0 0 @tyro-red; }
+      h2::after { border-color: @tyro-red; }
    }
 }
 
@@ -166,9 +169,8 @@ body { }
       li {
          a { color: white; }
          &:hover a {
-            color: @tyro-red;
-            text-decoration: none;
-            &::before { text-shadow: 3px 0 0 @tyro-red; }
+            color: @tyro-yellow;
+            &::before { text-shadow: 3px 0 0 @tyro-yellow; }
          }
          a::before {
             font-family: 'Glyphicons Halflings';
@@ -202,13 +204,17 @@ body { }
    .entry-title {
       display: inline;
       font-size: @font-size-h1;
-      a { color: white; }
    }
    .carousel .item img,
    .carousel .item a img {
       width: 100%;
    }
-   .entry-content { }
+   .entry-content {
+      a { text-decoration: underline; }
+      h4, h5 { .column-span(all); }
+      h4 { font-size: @font-size-h3; margin-top: 20px; }
+      h5 { font-size: @font-size-h4; font-style: italic; }
+   }
    footer { }
 
    &.format-standard {
@@ -273,7 +279,10 @@ body { }
       font-size: @font-size-large;
       list-style: none;
       padding: 0;
-      a, a:hover { color: white; }
+      a {
+         text-decoration: none;
+         &:hover { color: @tyro-yellow; }
+      }
    }
    .logos {
       float: right;
@@ -304,17 +313,21 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (max-width: @screen-sm-max) {
-   .banner .container .navbar-header {
-      .logo img { max-width: 80%; }
-      .primary-header-content .baseline { display: block; }
-      .secondary-header-content {
-         text-align: center;
-         .baseline-en, .hashtag { float: none; display: block; }
+@media (max-width: @screen-xs-max) {
+   .banner {
+      background-image: url('../img/background-eagle-768x800.jpg');
+      .container .navbar-header {
+         .logo img { max-width: 80%; }
+         .primary-header-content .baseline { display: block; }
+         .secondary-header-content {
+            text-align: center;
+            .baseline-en, .hashtag { float: none; display: block; }
+         }
+         .resorts-content { display: none; }
       }
-      .resorts-content { display: none; }
    }
    .hentry {
+      .entry-title { tex-align: left; }
       time { display:block; }
       &.format-standard, &.format-aside {
          .wp-post-image {
@@ -339,6 +352,28 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    .sidebar { padding-left: 1em; }
 }
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+   .banner {
+      background-image: url('../img/background-eagle-992x800.jpg');
+      .container .navbar-header {
+         .resorts-content {
+            height: 12em;
+            .resort { top: 1em; }
+            .valthorens { right: 70%; }
+            .orelle { left: 70%; }
+         }
+      }
+   }
+}
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+   .banner { background-image: url('../img/background-eagle-1200x800.jpg'); }
+}
+
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+   .banner { background-image: url('../img/background-eagle-2000x1000.jpg'); }
+}
+
+@media (min-width: @screen-xl-min) {
+   .banner { background-image: url('../img/background-eagle-2500x800.jpg'); }
+}
