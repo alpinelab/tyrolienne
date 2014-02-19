@@ -231,9 +231,12 @@ body {
    }
    .entry-content {
       a { text-decoration: underline; }
-      h4, h5 { .column-span(all); }
-      h4 { font-size: @font-size-h3; margin-top: 20px; }
-      h5 { font-size: @font-size-h4; font-style: italic; }
+      h4 {
+         .column-span(all);
+         font-size: @font-size-h3;
+         margin-top: 20px;
+         &, & ~ * { font-style: italic; }
+      }
    }
    footer { }
 
