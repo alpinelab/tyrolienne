@@ -66,4 +66,11 @@
     </div>
 
   </div>
+
+  <div class="submenu">
+    <a href="#news">NEWS</a>
+    <a href="#community">COMMUNITY</a>
+    <a href="#info">INFO</a>
+  </div>
+
 </header>

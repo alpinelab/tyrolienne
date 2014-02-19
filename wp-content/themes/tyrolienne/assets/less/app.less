@@ -37,7 +37,6 @@ body {
          padding-top: 4em;
          color: white;
          text-transform: uppercase;
-
          .logo {
             margin-bottom: 1em;
             img { padding-bottom: 0.5em; }
@@ -80,7 +79,9 @@ body {
          }
       }
    }
+   .submenu { display: none; }
 }
+
 
 .banner.affix {
    width: 100%;
@@ -97,7 +98,25 @@ body {
          display: none;
       }
    }
-   & + .wrap { padding-top: @navbar-height + @navbar-minified-height; }
+   .submenu {
+      font-size: @font-size-base;
+      text-align: center;
+      display: block;
+      margin-top: 1em;
+      a { margin: 2.5em; }
+      a::before {
+         font-family: 'Glyphicons Halflings';
+         content: "\e080";
+         color: black;
+         text-shadow: 2px 0 0 white;
+         font-size: 0.75em;
+         margin-left: -0.5em;
+         margin-right: 0.5em;
+      }
+      a:hover::before { text-shadow: 2px 0 0 @tyro-yellow; }
+   }
+   & + .submenu { position: fixed; top: @navbar-minified-height; }
+   & + .submenu + .wrap { padding-top: @navbar-height + @navbar-minified-height; }
 }
 
 
@@ -121,6 +140,7 @@ body {
       overflow: hidden;
       font-size: @font-size-huge;
       margin: 70px 0 40px;
+      text-align: left;
       .glyphicon {
          color: black;
          font-size: 0.85em;
@@ -144,7 +164,7 @@ body {
       h2 .glyphicon { text-shadow: 5px 0 0 @tyro-orange; }
       h2::after { border-color: @tyro-orange; }
    }
-   section#infos {
+   section#info {
       h2 .glyphicon { text-shadow: 5px 0 0 @tyro-red; }
       h2::after { border-color: @tyro-red; }
    }
@@ -204,6 +224,7 @@ body {
    .entry-title {
       display: inline;
       font-size: @font-size-h1;
+      a { float: left; text-align: left; }
    }
    .carousel .item img,
    .carousel .item a img {
@@ -326,8 +347,13 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
          .resorts-content { display: none; }
       }
    }
+   #news, #community, #info {
+      h2 { white-space: normal; }
+      h2::after { display: none; }
+   }
+   .banner.affix .submenu a { margin: 1.5em; }
    .hentry {
-      .entry-title { tex-align: left; }
+      .entry-title { text-align: left; }
       time { display:block; }
       &.format-standard, &.format-aside {
          .wp-post-image {
