@@ -241,8 +241,10 @@ body {
    }
    footer { }
 
+   &.format-standard, &.format-gallery {
+      .wp-post-image { width: 100%; height: auto; }
+   }
    &.format-standard {
-      .wp-post-image { width: 100%; }
       .entry-content { .content-columns(3); }
    }
    &.format-aside {

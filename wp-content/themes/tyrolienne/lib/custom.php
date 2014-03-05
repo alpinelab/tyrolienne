@@ -26,7 +26,7 @@ function image_asset($filename) {
 }
 
 // Post formats
-add_theme_support('post-formats', array('aside'));
+add_theme_support('post-formats', array('aside', 'gallery'));
 
 // Carousel
 function carousel_func() {
