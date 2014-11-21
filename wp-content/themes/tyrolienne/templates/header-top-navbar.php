@@ -68,9 +68,9 @@
   </div>
 
   <div class="submenu">
-    <a href="#news">NEWS</a>
     <a href="#community">COMMUNITY</a>
     <a href="#info">INFO</a>
+    <a href="#news">NEWS</a>
   </div>
 
 </header>

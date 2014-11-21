@@ -10,5 +10,5 @@
 
 <section id="news">
   <h2><i class="glyphicon glyphicon-chevron-right"></i>NEWS</h2>
-  <?= do_shortcode('[tyrolienne_news count=5]') ?>
+  <?= do_shortcode('[tyrolienne_news count=3]') ?>
 </section>
