@@ -75,7 +75,25 @@ body {
                }
             }
             .valthorens { right: 110%; }
-            .orelle { left: 110%; }
+            .orelle { left: 110%; }                     
+            .fix-submenu {
+               font-size: @font-size-base;
+               text-align: center;
+               display: block;
+               margin-top: 1em;
+               padding-top: 8em;
+               a { margin: 2.5em; }
+               a::before {
+                  font-family: 'Glyphicons Halflings';
+                  content: "\e080";
+                  color: black;
+                  text-shadow: 2px 0 0 white;
+                  font-size: 0.75em;
+                  margin-left: -0.5em;
+                  margin-right: 0.5em;
+               }
+               a:hover::before { text-shadow: 2px 0 0 @tyro-yellow; }
+            }
          }
       }
    }

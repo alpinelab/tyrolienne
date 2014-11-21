@@ -44,6 +44,12 @@
           </div>
         </div>
 
+        <div class="fix-submenu">
+          <a href="#community">COMMUNITY</a>
+          <a href="#info">INFO</a>
+          <a href="#news">NEWS</a>
+        </div>
+
         <div class="resort orelle">
           <a href="http://www.orelle.net" target="_blank">
             <img class="logo" src="<?= image_asset('logo-orelle-small.png') ?>"></img>
