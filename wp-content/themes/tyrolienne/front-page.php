@@ -1,3 +1,10 @@
+<?php if(tyrolienne_contest_exists_func()) : ?>
+<section id="contests">
+  <h2><i class="glyphicon glyphicon-chevron-right"></i>CONTESTS</h2>
+  <?= do_shortcode('[tyrolienne_contests count=1]') ?>
+</section>
+<?php endif; ?>
+
 <section id="community">
   <h2><i class="glyphicon glyphicon-chevron-right"></i>COMMUNITY</h2>
   <?= do_shortcode('[dc_social_wall id="16" icon_path="../../../themes/tyrolienne/assets/img/wp-social-stream/" image_path="../../../themes/tyrolienne/assets/img/wp-social-stream/"]') ?>

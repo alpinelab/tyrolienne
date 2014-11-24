@@ -7,7 +7,9 @@
 function tyrolienne_news_func($atts) {
   extract(shortcode_atts(array('count' => 5), $atts));
 
-  $news = new WP_Query(array('post_type' => 'post', 'posts_per_page' => $count));
+  $cat_id = get_cat_ID('Concours');
+
+  $news = new WP_Query(array('category__not_in' => $cat_id,'post_type' => 'post', 'posts_per_page' => $count));
 
   ob_start();
 
@@ -19,6 +21,34 @@ function tyrolienne_news_func($atts) {
 }
 add_shortcode('tyrolienne_news', 'tyrolienne_news_func' );
 
+// Shortcode: [tyrolienne_contests count=1]
+function tyrolienne_contests_func($atts) {
+  extract(shortcode_atts(array('count' => 1), $atts));
+
+  $cat_id = get_cat_ID('Concours');
+
+  $contests = new WP_Query(array('category__in' => $cat_id, 'post_type' => 'post'));
+
+  ob_start();
+
+  while ($contests->have_posts()) : $contests->the_post();
+    get_template_part('templates/content', get_post_format());
+  endwhile;
+
+  return ob_get_clean();
+}
+add_shortcode('tyrolienne_contests', 'tyrolienne_contests_func');
+
+//Test if "contests" posts exist
+function tyrolienne_contest_exists_func() {
+  $cat_id = get_cat_ID('Concours');
+  
+  $contests = new WP_Query(array('category__in' => $cat_id, 'post_status' => 'publish'));
+  
+  $contests_count = $contests->post_count;
+
+  return $contests_count != 0;
+}
 
 // URL helper
 function image_asset($filename) {
