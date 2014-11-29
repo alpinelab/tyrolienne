@@ -47,7 +47,7 @@ function tyrolienne_contest_exists_func() {
   
   $contests_count = $contests->post_count;
 
-  return $contests_count != 0;
+  return $contests_count > 0;
 }
 
 // URL helper

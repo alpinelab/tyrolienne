@@ -1,6 +1,6 @@
 <?php if(tyrolienne_contest_exists_func()) : ?>
 <section id="contests">
-  <h2><i class="glyphicon glyphicon-chevron-right"></i>CONTESTS</h2>
+  <h2><i class="glyphicon glyphicon-chevron-right"></i>CONCOURS</h2>
   <?= do_shortcode('[tyrolienne_contests count=1]') ?>
 </section>
 <?php endif; ?>
@@ -12,6 +12,7 @@
 
 <section id="info">
   <h2><i class="glyphicon glyphicon-chevron-right"></i>ACCÈS / INFO / TARIFS</h2>
+  <img src="<?= image_asset('bandeau-trace-tyrolienne.jpg') ?>">
   <?php get_template_part('templates/content', 'page'); ?>
 </section>
 

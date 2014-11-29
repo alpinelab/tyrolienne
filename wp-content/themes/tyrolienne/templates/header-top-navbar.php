@@ -46,7 +46,7 @@
 
         <div class="fix-submenu">
           <?php if(tyrolienne_contest_exists_func()) : ?>
-            <a href="#contests">CONTESTS</a>
+            <a href="#contests">CONCOURS</a>
           <?php endif; ?>
           <a href="#community">COMMUNITY</a>
           <a href="#info">INFO</a>
@@ -78,7 +78,7 @@
 
   <div class="submenu">
     <?php if(tyrolienne_contest_exists_func()) : ?>
-      <a href="#contests">CONTESTS</a>
+      <a href="#contests">CONCOURS</a>
     <?php endif; ?>
     <a href="#community">COMMUNITY</a>
     <a href="#info">INFO</a>
