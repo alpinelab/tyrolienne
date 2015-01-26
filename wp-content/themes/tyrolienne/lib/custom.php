@@ -3,6 +3,23 @@
  * Custom functions
  */
 
+function get_page_content($atts) {
+  extract(shortcode_atts(array(
+    'id' => null,
+    'title' => false,
+    ), $atts));
+  $the_query = new WP_Query('page_id='.$id);
+  while ($the_query->have_posts()) {
+    $the_query->the_post();
+    if($title == true){
+      the_title();
+    }
+    the_content();
+  }
+  wp_reset_postdata();
+}
+add_shortcode('my_content', 'get_page_content');
+
 // Shortcode: [tyrolienne_news count=5]
 function tyrolienne_news_func($atts) {
   extract(shortcode_atts(array('count' => 5), $atts));

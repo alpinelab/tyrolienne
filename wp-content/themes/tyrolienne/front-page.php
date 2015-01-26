@@ -16,6 +16,14 @@
   <?php get_template_part('templates/content', 'page'); ?>
 </section>
 
+<section id="webcam">
+  <h2><i class="glyphicon glyphicon-chevron-right"></i>WEBCAM</h2>
+  <p class="text-center">
+  <iframe scrolling="vertical" allowfullscreen="true" src="http://m.webcam-hd.com/orelle/tyrolienne" name="webcam" frameborder="no" height="600" width="1140"></iframe>
+  </p>
+  <?= do_shortcode('[my_content id=201]') ?>
+ </section>
+
 <section id="news">
   <h2><i class="glyphicon glyphicon-chevron-right"></i>NEWS</h2>
   <?= do_shortcode('[tyrolienne_news count=3]') ?>

@@ -50,6 +50,7 @@
           <?php endif; ?>
           <a href="#community">COMMUNITY</a>
           <a href="#info">INFO</a>
+          <a href="#webcam">WEBCAM</a>
           <a href="#news">NEWS</a>
         </div>
 
@@ -82,6 +83,7 @@
     <?php endif; ?>
     <a href="#community">COMMUNITY</a>
     <a href="#info">INFO</a>
+    <a href="#webcam">WEBCAM</a>
     <a href="#news">NEWS</a>
   </div>
 
