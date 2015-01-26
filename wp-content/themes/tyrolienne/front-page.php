@@ -19,7 +19,7 @@
 <section id="webcam">
   <h2><i class="glyphicon glyphicon-chevron-right"></i>WEBCAM</h2>
   <p class="text-center">
-  <iframe scrolling="vertical" allowfullscreen="true" src="http://m.webcam-hd.com/orelle/tyrolienne" name="webcam" frameborder="no" height="600" width="1140"></iframe>
+  <iframe scrolling="vertical" allowfullscreen="true" src="http://m.webcam-hd.com/orelle/tyrolienne" name="webcam" frameborder="no" height="600" width="100%"></iframe>
   </p>
   <?= do_shortcode('[my_content id=201]') ?>
  </section>
